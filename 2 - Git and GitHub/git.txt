@@ -53,3 +53,15 @@ git branch [branch_name]
 git checkout [branch_name]
 
 git switch [branch_name]
+
+- Merging
+
+- Merge the code to a branch
+
+git merge [branch_name]
+
+ 
+
+- Delete a branch
+
+git branch -d [branch_name]
