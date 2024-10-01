@@ -32,11 +32,11 @@ git log --oneline
 
  
 
-- Branching
+- Branching       
 
  
-
-- Check all of the branch
+ 
+ - Check all of the branch
 
 git branch -a
 
