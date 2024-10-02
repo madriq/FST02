@@ -1,4 +1,4 @@
-﻿BOOTCAMP FRONT END 
+﻿BOOTCAMP FRONT END Day 1
 
 Gui and CLI
 
@@ -34,3 +34,107 @@ touch [file_name.extension]
   
 - Delete a file  
 rm [file_name.extension]
+
+
+
+BOOTCAMP FRONT END Day 2
+
+GIT & GITHUB
+
+Version control system (Recruiter look for this knowledge on candidate)
+
+-Keeping track of changes
+-Collaborating with other developers
+-Undoing mistakes 
+-seeing our progress
+-Experimenting Safely
+
+git config --global user.name "madriq"
+
+git config user.name
+
+git config --global user.email "azriq@live.com.my"
+
+git config user.email
+
+Repositories (Repo's)
+
+Git 3 stage Architecture
+
+1.Working Area
+
+U - Untracked
+
+A - Added
+
+2.Staging Area  git config --global --add safe.directory '*'
+
+3.Commit Stage 
+
+git commit -m "create notes for git"
+
+ git log (to see commit log ) who is create the code
+ git log --online	
+
+To exit git log use type q
+
+
+Branches
+
+Master Branch
+starting Branch
+Stable version of your code
+Branch that is published
+
+Additional Branches 
+
+- Check the History
+
+git log 
+
+git log --oneline
+
+ 
+
+- Branching
+
+ 
+
+- Check all of the branch
+
+git branch -a
+
+ 
+
+- Create a new branch
+
+git branch [branch_name]
+
+ 
+
+- Switch to a different branch
+
+git checkout [branch_name]
+
+git switch [branch_name]
+
+M - modified
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
