@@ -120,6 +120,212 @@ git switch [branch_name]
 
 M - modified
 
+git commit --amend -m "Edited commit description." (can used this command before we pushed to repository)
+
+
+
+BOOTCAMP FRONT END Day 3
+
+HTML 
+
+!
+
+VIEW PORT - VISIBLE PORTION OF THE PAGE
+
+<h1>Hypertext Markup Language - HTML</h1>
+
+h1 - h6
+
+CTRL + / = notes HTML WILL NOT READ IT
+
+
+BOOTCAMP FRONT END Day 4
+
+To check either fonts supported or not can check using 
+
+https://fonts.google.com/specimen/Roboto
+
+To check color pallet
+https://coolors.co/
+
+BOOTCAMP FRONT END Day 5
+
+Positioning.HTML
+
+/* Absolute Position */
+/* Relative to the parent container that have position that is not static */
+#absolute {
+  background-color: #0cf;
+  position: absolute;
+  /* top, right, bottom, left */
+  top: 0;
+  right: 0px;
+}
+
+
+/* Fixed Positioning */
+/* Relative to the viewport */
+/* Stays on the same place when you scroll */
+#fixed {
+  background-color: #f00;
+  position: fixed;
+  /* top, right, bottom, left */
+  bottom: 0px;
+  right: 0px;
+}
+
+
+/* Sticky Position */
+#sticky {
+  background-color: #3c3;
+  position: sticky;
+  /* top, right, bottom, left */
+  top: 0px;
+}
+
+ .flexContainer {
+  display: flex;
+  flex-direction: column;
+  flex-direction: row; /* Default */
+  /* justify-content - sets the alignment on the main axis */
+  justify-content: flex-end;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  justify-content: flex-start; /* Default */
+}
+
+
+ /* align-items - sets the alignment on the cross axis */
+  align-items: stretch; /* Default */
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: center;
+
+
+flex-wrap: wrap; /* Push the content down when the content doesn't fit */
+  flex-wrap: wrap-reverse;
+  flex-wrap: nowrap; /* Default */
+
+
+ /* Column and Row Gap */
+  column-gap: 20px;
+  row-gap: 20px;
+  gap: 20px;
+
+Pls, why “.flexItem1” is inside “.flexContainer”? Is the following equivalent? “.flexContainer, .flexIten1 {}” == “.flexcontainer {.flexItem1{}}”
+
+/* Willingness of items to shrink*/
+.flexItem1 {
+  flex-shrink: 0; /* Not willing to shrink */
+  flex-shrink: 1; /* Willing to shrink */
+}
+/* Willingness of items to grow*/
+.flexItem3 {
+  flex-grow: 0; /* Not willing to grow */
+  flex-grow: 1; /* Willing to grow */
+}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+    <style>
+      html {
+        font-size: 16px;
+      }
+
+      body {
+        background-color: #e3d9c1;
+      }
+
+      .gridContainer {
+        padding: 20px;
+      }
+
+      .gridItem {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .gridItem:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <link rel="stylesheet" href="./grid.css" />
+  </head>
+  <body>
+    <div class="gridContainer">
+      <div class="gridItem gridItem1">Home</div>
+      <div class="gridItem gridItem2">About Us</div>
+      <div class="gridItem gridItem4">Contact Us</div>
+      <div class="gridItem gridItem4">Mission</div>
+      <div class="gridItem gridItem5">Vision</div>
+      <div class="gridItem gridItem6">Cart</div>
+      <div class="gridItem gridItem7">Events</div>
+      <div class="gridItem gridItem8">Testimonials</div>
+      <div class="gridItem gridItem9">Support</div>
+      <div class="gridItem gridItem10">Careers</div>
+      <div class="gridItem gridItem11">Product 1</div>
+      <div class="gridItem gridItem12">Product 2</div>
+      <div class="gridItem gridItem13">Product 3</div>
+      <div class="gridItem gridItem14">Product 4</div>
+      <div class="gridItem gridItem15">Product 5</div>
+      <div class="gridItem gridItem16">Product 6</div>
+      <div class="gridItem gridItem17">Product 7</div>
+      <div class="gridItem gridItem18">Product 8</div>
+      <div class="gridItem gridItem19">Product 9</div>
+      <div class="gridItem gridItem20">Product 10</div>
+      <div class="gridItem gridItem21">Product 11</div>
+      <div class="gridItem gridItem22">Product 12</div>
+      <div class="gridItem gridItem23">Product 13</div>
+      <div class="gridItem gridItem24">Product 14</div>
+      <div class="gridItem gridItem25">Product 15</div>
+    </div>
+  </body>
+</html>
+
+
+Grid.css
+
+.gridContainer {
+    display: grid;
+   
+      /* Using px */
+    grid-template-columns: 200px 200px 200px 200px;  
+
+/* Using auto */
+  /* Adjust automatically based on the content width */
+  grid-template-columns: auto auto auto auto;
+
+   /* Using percentage */
+   grid-template-columns: 33% 33% 33%;
+   border: 2px solid black;
+   padding: 0;
+   /* Using Fr- Fractional Units */
+   /* Each occupy one fractional unit(fr), effectively dividing the available space equally among the columns */
+   grid-template-columns: 1fr 1fr 1fr;
+
+/* Media Query for Desktops, Extra Large Screens */
+@media screen and (min-width: 1025px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    color: red;
+  }
+}
+
+ }
+
+BOOTCAMP FRONT END Day 6
 
 
 

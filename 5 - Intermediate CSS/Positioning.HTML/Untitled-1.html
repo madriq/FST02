@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Tests</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.3.2/mocha.min.css">
+</head>
+<body>
+  <div id="mocha"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.3.2/mocha.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.3.4/chai.min.js"></script>
+
+  <script>
+    mocha.setup('bdd');
+    const { assert } = chai;
+  </script>
+
+  <script>
+    describe('Flexbox Layout', () => {
+      let container;
+      let flexItems;
+
+      beforeEach(() => {
+        document.body.innerHTML = `
+          <div class="container flexContainer">
+            <div class="flexItems flexItem1">1</div>
+            <div class="flexItems flexItem2">2</div>
+            <div class="flexItems flexItem3">3</div>
+            <div class="axis main-axis"></div>
+            <div class="axis cross-axis"></div>
+          </div>
+        `;
+        container = document.querySelector('.container');
+        flexItems = document.querySelectorAll('.flexItems');
+      });
+
+      it('should have a container with correct styles', () => {
+        const styles = window.getComputedStyle(container);
+        assert.equal(styles.height, '400px');
+        assert.equal(styles.backgroundColor, 'rgb(168, 218, 220)');
+        assert.equal(styles.position, 'relative');
+        assert.equal(styles.overflow, 'hidden');
+      });
+
+      it('should have flex items with correct styles', () => {
+        flexItems.forEach(item => {
+          const styles = window.getComputedStyle(item);
+          assert.equal(styles.width, '200px');
+          assert.equal(styles.margin, '10px');
+          assert.equal(styles.border, '6px solid rgb(69, 123, 157)');
+          assert.equal(styles.borderRadius, '12px');
+          assert.equal(styles.backgroundColor, 'rgb(241, 250, 238)');
+          assert.equal(styles.textAlign, 'center');
+          assert.equal(styles.fontSize, '40px');
+        });
+      });
+
+      it('should have a main axis with correct styles', () => {
+        const mainAxis = document.querySelector('.main-axis');
+        const styles = window.getComputedStyle(mainAxis);
+        assert.equal(styles.position, 'absolute');
+        assert.equal(styles.top, '50%');
+        assert.equal(styles.height, '6px');
+        assert.equal(styles.width, '2160px');
+        assert.equal(styles.backgroundColor, 'rgb(29, 53, 87)');
+      });
+
+      it('should have a cross axis with correct styles', () => {
+        const crossAxis = document.querySelector('.cross-axis');
+        const styles = window.getComputedStyle(crossAxis);
+        assert.equal(styles.position, 'absolute');
+        assert.equal(styles.right, '50%');
+        assert.equal(styles.height, '1080px');
+        assert.equal(styles.width, '6px');
+        assert.equal(styles.backgroundColor, 'rgb(230, 57, 70)');
+      });
+    });
+  </script>
+
+  <script>
+    mocha.run();
+  </script>
+</body>
+</html>

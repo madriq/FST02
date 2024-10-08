@@ -1,0 +1,23 @@
+/* Element Selector */
+span {
+    font-size: 18px;
+
+    color: white;
+  
+    background-color: green;
+
+}
+
+/* Class Selector */
+.intro-paragraphs {
+
+    color: red;
+  
+    background-color: pink;
+  
+  }
+
+#main-heading {
+
+    font-weight:bold
+}
