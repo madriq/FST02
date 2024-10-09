@@ -70,3 +70,11 @@ darkModeBtn.addEventListener("click", function(){
     pageContainer.style.backgroundColor = "black";
 });
 
+let darkModeBtn = document.getElementById("dark-mode-btn");
+darkModeBtn.addEventListener("click", function(){
+    let pageContainer = document.getElementById("page-container");
+    pageContainer.style.backgroundColor = "black";
+    pageContainer.style.color = "white";
+    let pageModeText = document.getElementById("page-mode-text");
+    pageModeText.textContent = "Dark Mode";
+});
